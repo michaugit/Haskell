@@ -28,9 +28,9 @@ my_and :: [Bool] -> Bool
 my_and = foldl(\acc x -> acc && x ) True 
 
 
------------------------  false  -----------------------
-my_false :: [Bool] -> Bool
-my_false = foldl(\acc x -> acc || x ) False 
+-------------------------  or -------------------------
+my_or :: [Bool] -> Bool
+my_or = foldl(\acc x -> acc || x ) False 
 
 
 ----------------------- head  -------------------------
