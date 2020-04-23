@@ -34,10 +34,12 @@ my_or = foldl(\acc x -> acc || x ) False
 
 
 ----------------------- head  -------------------------
-my_head :: [a] -> a  
-my_head = foldr1 (\x y -> x)  
+my_head :: [a] -> a 
+my_head [] = error "Empty list"
+my_head xs = foldr1 (\x y -> x)  xs
 
 
 ----------------------- last  -------------------------
-my_last :: [a] -> a  
-my_last = foldl1 (\y x -> x)
+my_last :: [a] -> a 
+my_last [] = error "Empty list"
+my_last xs = foldl1 (\y x -> x)xs 
